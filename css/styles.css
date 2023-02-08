@@ -462,9 +462,7 @@ img {
 /* ----------------------- CUSTOMERS ------------------- section */
 
 .customers {
-  /* padding: 130px 0 120px 0; */
-  padding-top: 130px;
-  padding-bottom: 120px;
+  padding: 120px 0;
 }
 
 .customers-header {
