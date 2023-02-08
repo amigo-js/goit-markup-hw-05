@@ -462,7 +462,9 @@ img {
 /* ----------------------- CUSTOMERS ------------------- section */
 
 .customers {
-  padding: 130px 0 120px 0;
+  /* padding: 130px 0 120px 0; */
+  padding-top: 130px;
+  padding-bottom: 120px;
 }
 
 .customers-header {
@@ -477,7 +479,7 @@ img {
 
 .customers-icon-item {
   box-sizing: border-box;
-  padding: 16px 32px;
+
   margin-right: 24px;
 }
 
@@ -491,6 +493,7 @@ img {
   justify-content: center;
   width: 168px;
   height: 88px;
+  padding: 16px 32px;
   fill: #8e8f99;
   border: 1px solid #8e8f99;
   border-radius: 4px;
