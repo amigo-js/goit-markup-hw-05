@@ -13,6 +13,7 @@ body {
   --dark-color: #434455;
   --light-color: #f4f4fd;
   --dark-light-color: #e7e9fc;
+  --transition-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .visually-hidden {
@@ -113,7 +114,6 @@ img {
   color: var(--logo-and-btn-color);
 }
 
-/*  */
 .active-page::after {
   content: "";
   position: absolute;
@@ -145,10 +145,8 @@ img {
 
 .header-link {
   color: var(--main-dark-color);
-
-  /*  */
   position: relative;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-func);
 }
 
 .header-link:hover,
@@ -164,7 +162,7 @@ img {
 .contact-link {
   color: var(--dark-color);
   padding: 24px 0;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-func);
 }
 
 .contact-link:hover,
@@ -233,6 +231,7 @@ img {
   min-height: 56px;
   gap: 10px;
   border: 1px solid transparent;
+  transition: background-color var(--transition-func);
 }
 
 .main-btn:focus,
@@ -248,6 +247,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity var(--transition-func), visibility var(--transition-func);
 }
 
 .backdrop.is-hidden {
@@ -258,19 +258,16 @@ img {
 .modal {
   width: 408px;
   height: 576px;
-
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--transition-func), opacity var(--transition-func);
 }
-
-/*  */
 
 .btn-modal-close {
   position: absolute;
@@ -284,7 +281,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition-func);
 }
 .btn-modal-close:hover,
 .btn-modal-close:focus {
@@ -297,7 +294,7 @@ img {
 .modal-icon-close {
   height: 8px;
   width: 8px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--transition-func);
 }
 
 /* ------------------- ATTITUDES --------------------- section */
@@ -451,12 +448,15 @@ img {
   justify-content: center;
   width: 40px;
   height: 40px;
+  fill: var(--light-color);
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  transition: background-color var(--transition-func);
 }
 
 .photo-caption-soc-link:focus,
 .photo-caption-soc-link:hover {
   background: var(--focus-and-hover-color);
-  border-radius: 50px;
 }
 
 /* ----------------------- CUSTOMERS ------------------- section */
@@ -494,6 +494,11 @@ img {
   fill: #8e8f99;
   border: 1px solid #8e8f99;
   border-radius: 4px;
+  transition: border-color var(--transition-func);
+}
+
+.customers-icon {
+  transition: fill var(--transition-func);
 }
 
 .customers-icon-link:hover,
@@ -582,12 +587,15 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  fill: var(--light-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: background-color var(--transition-func);
 }
 
 .social-media-link:focus,
 .social-media-link:hover {
   background: #31d0aa;
-  border-radius: 50px;
 }
 
 /* --------------------- portfolio.html file ------------- */
@@ -620,6 +628,9 @@ img {
   flex-direction: row;
   align-items: flex-start;
   padding: 12px 24px;
+  transition: background-color var(--transition-func),
+    color var(--transition-func), box-shadow var(--transition-func),
+    border-color var(--transition-func);
 }
 
 .portfolio-buttons-item-btn:hover,
@@ -654,6 +665,7 @@ img {
   box-sizing: border-box;
   width: calc((100% - 48px) / 3);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+  transition: box-shadow var(--transition-func);
 }
 
 .portfolio-product-item:hover,
@@ -703,7 +715,7 @@ img {
   width: 100%;
   background-color: #4d5ae5;
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition-func);
 }
 .overlay-text {
   color: #f4f4fd;
